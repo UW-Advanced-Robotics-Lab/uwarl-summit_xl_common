@@ -2,7 +2,8 @@
 <launch>
 	
 	<arg name="prefix" default="summit_xl_"/>
-	<arg name="scan_topic" default="front_laser/scan"/>
+	<!--arg name="scan_topic" default="front_laser/scan"/-->
+	<arg name="scan_topic" default="summit_xl/scan"/>
 	<arg name="map_frame" default="$(arg prefix)map"/> 
 	<arg name="odom_frame" default="$(arg prefix)odom"/> 
 	<arg name="base_frame" default="$(arg prefix)base_link"/> 
