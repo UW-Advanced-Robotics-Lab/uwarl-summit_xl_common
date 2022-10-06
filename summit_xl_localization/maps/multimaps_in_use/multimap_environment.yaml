@@ -1,0 +1,12 @@
+level_0:
+  global_frame: level_0_map
+  maps_package: summit_xl_localization
+  maps:
+    localization: maps/multimaps_in_use/map1.yaml
+    routes: maps/multimaps_in_use/map1.yaml
+level_1:
+  global_frame: level_1_map
+  maps_package: summit_xl_localization
+  maps:
+    localization: maps/multimaps_in_use/map2.yaml
+    routes: maps/multimaps_in_use/map2.yaml
