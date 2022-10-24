@@ -22,6 +22,8 @@
 	<xacro:property name="PI" value="3.1415926535897931"/>
 
 	<!-- Wheel parameters -->
+	<xacro:property name="wheel_radius" value="0.127" /> <!-- omin-wheel -->
+
 	<xacro:property name="wheel_offset_x" value="0.2225" />    <!-- x,y,z in translation from base_link to the center of the wheel -->
 	<xacro:property name="wheel_offset_y" value="0.2045" />    
 	<xacro:property name="wheel_offset_z" value="0.0" />
@@ -92,9 +94,9 @@
 		</xacro:structure_laser-->
     
 		<!-- SENSORS -->
-		<xacro:sensor_vlp16 prefix="$(arg prefix)front_laser" parent="$(arg prefix)base_link">
-			<origin xyz="${front_laser_offset_x} ${front_laser_offset_y} ${front_laser_offset_z}" rpy="0 0 0"/> 
-		</xacro:sensor_vlp16>
+		<xacro:sensor_velodyne_vlp16 prefix="$(arg prefix)front_laser" parent="$(arg prefix)base_link" range_min="0.4" range_max="130">
+			<origin xyz="${front_laser_offset_x} ${front_laser_offset_y} ${front_laser_offset_z}" rpy="0 0 0" /> <!-- [m] -->
+		</xacro:sensor_velodyne_vlp16>
 		<!-- <xacro:sensor_orbbec_astra prefix="$(arg prefix)front_rgbd_camera" parent="$(arg prefix)base_link" prefix_topic="front_rgbd_camera">
 			<origin xyz="${front_rgbd_camera_offset_x} ${front_rgbd_camera_offset_y} ${front_rgbd_camera_offset_z}" rpy="0 0 0"/>
 		</xacro:sensor_orbbec_astra> -->
