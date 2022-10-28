@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+
+<launch>
+	<rosparam param="use_sim_time">true</rosparam>
+	<node pkg="rosbag" type="record" name="rosb_bag_recorder" args="record -o /media/meaosman/Unversity/PostGraduate/Waterloo/Lifelong_and_Precision_Localization/AMCL_development/simulation_recordings/ /summit_xl_a/amcl_pose /summit_xl_a/ground_truth/state /mhe_fusion /summit_xl_a/lidar_odometry_with_covariance_stamped /summit_xl_a/encoder_odometry"/>
+</launch>
