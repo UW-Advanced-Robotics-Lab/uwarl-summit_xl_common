@@ -1,0 +1,22 @@
+wam_joints_control:
+  joint1:
+    type: position_controllers/JointPositionController
+    joint: wam/base_yaw_joint
+  joint2:
+    type: position_controllers/JointPositionController
+    joint: wam/shoulder_pitch_joint
+  joint3:
+    type: position_controllers/JointPositionController
+    joint: wam/shoulder_yaw_joint
+  joint4:
+    type: position_controllers/JointPositionController
+    joint: wam/elbow_pitch_joint
+  joint5:
+    type: position_controllers/JointPositionController
+    joint: wam/wrist_yaw_joint
+  joint6:
+    type: position_controllers/JointPositionController
+    joint: wam/wrist_pitch_joint
+  joint7:
+    type: position_controllers/JointPositionController
+    joint: wam/palm_yaw_joint

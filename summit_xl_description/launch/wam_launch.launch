@@ -1,0 +1,13 @@
+<launch>
+<!-- send iit_wamcyclope urdf to param server -->
+		<rosparam param="use_sim_time">true</rosparam>
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find summit_xl_description)/robots/wam_7dof_wam_bhand.urdf.xacro'" />
+    
+    <arg name="x" default="0"/>
+    <arg name="y" default="0"/>
+    <arg name="z" default="0.5"/>
+    
+    
+    <node name="wam_robot" pkg="gazebo_ros" type="spawn_model" output="screen"
+    		args="-urdf -param robot_description -model iit_wam -x $(arg x) -y $(arg y) -z $(arg z)" />
+</launch>
