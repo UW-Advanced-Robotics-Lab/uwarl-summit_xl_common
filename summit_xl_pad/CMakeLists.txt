@@ -11,13 +11,13 @@ find_package(catkin REQUIRED COMPONENTS
     )
     
 add_service_files(DIRECTORY srv 
-   FILES
+    FILES
     enable_disable_pad.srv
 )
 
 generate_messages(
-   DEPENDENCIES
-   robotnik_msgs sensor_msgs summit_xl_pad
+    DEPENDENCIES
+    robotnik_msgs sensor_msgs summit_xl_pad
  )
 
 catkin_package(
@@ -39,8 +39,8 @@ add_executable(summit_xl_pad src/summit_xl_pad.cpp)
 add_dependencies(summit_xl_pad summit_xl_pad_generate_messages_cpp)
 
 target_link_libraries(summit_xl_pad
-   ${catkin_LIBRARIES}
- )
+    ${catkin_LIBRARIES}
+)
 
 install(
   TARGETS summit_xl_pad
