@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <launch>
-	  <arg name="prefix" value="summit_xl_"/>
+	  <arg name="id_robot"        default="summit_xl"/>
+	  <arg name="prefix" value="$(arg id_robot)_"/>
 	  <!-- Map server -->
 	  <arg name="map_file" default="$(find summit_xl_localization)/maps/map_in_use/map.yaml"/>
 	  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)">
@@ -16,7 +17,8 @@
 	  <!-- move_base -->
 
 	  <include file="$(find summit_xl_navigation)/launch/move_base.launch">
-		<arg name="scan_topic" value="scan" />
+		<arg name="front_scan_topic" value="scan" />
+		<arg name="local_planner" value="teb" /> 
 	   </include>
 
 
